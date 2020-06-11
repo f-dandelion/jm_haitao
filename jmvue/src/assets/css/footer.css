@@ -1,0 +1,44 @@
+.foot{
+    background: #FFFFFF;
+    padding:0;
+}
+.footT{
+    justify-content: center;
+    margin:50px 0;   
+}
+hr{
+    margin:0;
+}
+.footM{
+    margin:50px 0;
+    padding:0 50px;
+    height:220px;
+    overflow: hidden;
+}
+.itemMl{
+    padding-left: 100px;
+}
+.itemMr{
+    display: flex;
+    justify-content: space-between;
+}
+.itemFont{
+    color:#E58336;
+    font-size:26px;
+    margin-bottom:10px;
+}
+.itemMl span{
+    color:#5d5858;
+    font-size:14px;
+    margin-right:10px;
+}
+.itemMr ul{
+    color:#5d5858;
+    font-size:18px;
+}
+.itemMr li a{
+    color:#5d5858;
+    font-size:14px;
+}
+
+

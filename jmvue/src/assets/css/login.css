@@ -1,0 +1,184 @@
+.loginTop{
+    justify-content: left;
+    height:50px;
+    line-height: 50px;
+    background: #ccc;
+    padding-left: 100px;
+}
+.loginTop div :first-child{
+    font-size: 26px;
+    color:#E58336;
+    margin-right:50px;
+}
+.loginTop div :last-child{
+    font-size: 18px;
+    color:#5d5858;
+}
+.loginM{
+    background: url("../../../public/img/pic_login/login.jpg") no-repeat;
+    height:406px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.rt{
+    background-color: #272626;
+    opacity: 0.6;
+    width: 410px;
+    height:350px;
+    box-sizing: border-box;
+}
+#cover .txt{
+    overflow: hidden;
+    padding: 20px;
+}
+#form-register .txt{
+    padding: 10px;
+    margin-bottom: -15px;
+}
+#cover .txt p, #form-register .txt p{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    color:#fff;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #f0f0f0;
+    padding:0 20px;
+    margin-bottom: 20px;
+}
+.zhuCe{
+    font-size: 14px;
+    color:#ccc;
+}
+.zhuCe:hover{
+    color:#E58336;
+}
+#cover .txt .text input{
+    border:1px solid #ddd;
+    padding:10px 20px;
+    width:80%;
+    margin-bottom:40px;
+    border: none;
+    text-indent: 10px;
+    margin-left:30px;
+    border-radius: 3px;
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .75);*/
+}
+#cover .txt .text span img {
+    position: relative;
+    left:-292px;
+}
+#cover .txt .chose{
+    margin-bottom:10px;
+    color: #ccc;
+}
+#cover .txt .chose .checkbox{
+    position: relative;
+    top:5px;
+    left:0;
+}
+#cover .txt .chose :first-child, #cover .txt .chose :nth-child(2){
+    float:left;
+    font-size: 14px;
+    color:#ccc;
+}
+#cover .txt .chose :last-child{
+    float:right;
+    font-size: 14px;
+    color:#ccc;
+}
+
+.button_login{
+    /*background: -moz-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);
+    background: -webkit-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);
+    background: -o-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);
+    background: -ms-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);*/
+    background: #E58336;
+    border-radius: 3px;
+    text-align:center;
+    width:80%;
+    line-height: 35px;
+    font-weight:bold;
+    margin-top:10px;
+    border: none;
+    outline: none;
+}
+.button_login:hover{
+    background: rgb(177, 80, 5);
+}
+.panel{
+    background-color: #272626;
+    opacity: 0.6;
+    width: 600px;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    margin-left:-80px
+}
+.form-group > label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #fff;
+}
+.form-group > input {
+    padding:10px 20px;
+    width:275px;
+    height:30px;
+    margin-top: 10px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+.form-group > span {
+    width: 275px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+.msg-default {
+    background-color: #ccc;
+}
+.msg-error {
+    background-color: #d00;
+}
+.msg-success {
+    background-color: #0d0;
+}
+.hidden {
+    display: none;
+}
+#form-register .form-group:last-child input{
+    /*background: -moz-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);
+    background: -webkit-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);
+    background: -o-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);
+    background: -ms-linear-gradient(top, rgb(206, 144, 96) 0%, #E58336 100%);*/
+    background: #E58336;
+    line-height: 6px;
+    font-weight:bold;
+    
+}
+#form-register .form-group:last-child input:hover{
+    background: rgb(177, 80, 5);
+}
+#showResult{
+    width: 275px;
+    height: 30px;
+    /* margin-top: 250px; */
+    /* margin-bottom: -51px; */
+    position: absolute;
+    top: 330px;
+    right: 500px;
+    display: inline-block;
+    line-height: 30px;
+    /*background: red;*/
+    font-size: 12px;
+    color: #fff;
+    padding-left: 8px;
+}
+
