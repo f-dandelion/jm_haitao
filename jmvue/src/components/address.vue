@@ -38,14 +38,6 @@
                     <input v-model="phone" name="" type="text" class="add_text" style=" width:200px"/>&nbsp;&nbsp;(选填)
                 </td>
             </tr>
-            <!--<tr>
-                <td class="label_name">固定电话：</td>
-                <td>
-                    <input name="" type="text" class="add_text" style="width:60px" placeholder="区号"/>
-                    -<input name="" type="text" class="add_text" style="width:100px" placeholder="电话号码"/>
-                    -<input name="" type="text" class="add_text" style="width:60px" placeholder="分机号"/>&nbsp;&nbsp;(选填)
-                </td>
-            </tr>-->
         </table>
         <div class="center">
         <input @click="save" name="" type="submit" value="保存"  class="add_dzbtn"/>

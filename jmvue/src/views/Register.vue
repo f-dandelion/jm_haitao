@@ -20,27 +20,22 @@
                   <div class="form-group">
                     <label for="uname">用户名：</label>
                     <input  v-model="uname" @blur="checkRegular1" autocomplete="" required="" minlength="3" maxlength="12" type="text" placeholder="请输入用户名" autofocus="" id="name">
-                    <!--<span class="msg-error hidden">用户名不能为空</span>-->
                   </div>
                   <div class="form-group">
                     <label for="upwd">登录密码：</label>
                     <input v-model="upwd"  @blur="checkRegular2" required="" type="password" minlength="6" maxlength="12" placeholder="请输入密码"  autofocus="" id="password">
-                    <!--<span class="msg-default hidden">密码长度在6到12位之间</span>-->
                   </div>
                   <div class="form-group">
                     <label for="upwdconfirm">确认密码：</label>
                     <input v-model="confirmPwd" @blur="checkRegular3" required="" type="password" minlength="6" maxlength="12" placeholder="请确认密码" autofocus="" id="upwdconfirm">
-                    <!--<span class="msg-default hidden">密码长度在6到12位之间</span>-->
                   </div>
                   <div class="form-group">
                     <label for="email">邮箱：</label>
                     <input v-model="email" @blur="checkRegular4" autocomplete="" required="" type="email" placeholder="请输入邮箱地址"  id="email">
-                    <!--<span class="msg-default hidden">请输入合法的邮箱地址</span>-->
                   </div>
                   <div class="form-group">
                     <label for="phone">手机号：</label>
-                    <input v-model="phone" @blur="checkRegular5" id="phone"  placeholder="请输入您的手机号" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required="" type="text">
-                    <!--<span class="msg-default hidden">请输入合法的手机号</span>-->
+                    <input v-model="phone" @blur="checkRegular5" id="phone"  placeholder="请输入您的手机号"  required="" type="text">
                   </div> 
                   <div class="form-group">
                     <label></label>

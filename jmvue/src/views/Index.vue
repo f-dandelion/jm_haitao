@@ -560,7 +560,7 @@ export default {
         }
     },
     created(){
-        this.getDetail()
+        
          /*(async ()=>{
         var result=await this.axios.get("/index").then(result=>{
             console.log(result.data);
@@ -568,6 +568,7 @@ export default {
         })();*/  
     },
     mounted(){
+        this.getDetail()
 
         //翻转
         var timer1=null;
@@ -584,9 +585,6 @@ export default {
             var hour=23;
             var minute=59;
             var second=60;
-            /*if(second<10) second="0" + second;
-            if(minute<10) minute="0" + minute;
-            if(hour<10) hour="0" + hour;*/
             var timer2=setInterval(function(){
                 second--;
                 if(day<=0 && hour<=0 && second<=0 && minute<=0){

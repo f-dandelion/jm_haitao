@@ -80,64 +80,50 @@ export default {
         deletePro(event){
             //this.list.splice(index,1);
             this.$confirm("是否删除指定数据").then(res=>{
-       //(3)将当前商品id传递函数
-       var id = event.target.dataset.id;
-       //(4)发送ajax请示完成删除任务
-       var url="/delItems/delItem";
-       var obj={id:id};
-       this.axios.get(url,{
-         params:obj
-       }).then(res=>{
-         if(res.data.code==1){
-          this.$message("删除成功");
-          this.loadMore();//刷新
-         }else{
-          this.$message("删除失败"); 
-         }
-       }) 
-       //(5)删除成功 提示"删除成功"
-      }).catch(err=>{
-      })
+            //将当前商品id传递函数
+            var id = event.target.dataset.id;
+            var url="/delItems/delItem";
+            var obj={id:id};
+            this.axios.get(url,{
+                params:obj
+            }).then(res=>{
+                if(res.data.code==1){
+                    this.$message("删除成功");
+                    this.loadMore();//刷新
+                }else{
+                    this.$message("删除失败"); 
+                }
+            }) 
+            }).catch(err=>{
+           })
         },
         
         //删除多个
         deleteItems(){
-      //功能:删除用户删除中多个商品
-      //(1)显示确认对话框
-      this.$confirm("是否删除指定宝贝").then(res=>{
-       //(2)创建变量保存选中id值  id
-       var id = "";  //1,2,3
-       //(3)创建循环遍历数组中每个元素
-       for(var item of this.list){
-        //(4)判断当前元素属性cb是否等于true
-        if(item.cb){
-         //(5)拼接id      2,3,4,
-         id+=item.id+",";
-        }
-       }//for end
-       //(6)去除字符串中最后一个逗号
-       id = id.slice(0,-1);
-      //(7)判断用户是否选中商品 请选择需要删除商品
-      if(id==""){
-        this.$message("请选择需要删除商品");
-        return;
-      }
-      //(8)创建url 创建obj 发送ajax请求
-      var url = "/delItems";
-      var obj = {id:id};
-      this.axios.get(url,{params:obj}).then(res=>{
-       //(9)获取服务器返回数据
-       //(10)判断删除多个商品是否成功
-       if(res.data.code==-1){
-         this.$message("删除失败");
-       }else{
-         this.$message("删除成功");
-         this.loadMore();
-       }
-       //(11)刷新操作 loadMore()
-      })
-      })
-    },
+            this.$confirm("是否删除指定宝贝").then(res=>{
+                var id = "";
+                for(var item of this.list){
+                    if(item.cb){
+                        id+=item.id+",";
+                    }
+                }
+                id = id.slice(0,-1);
+                if(id==""){
+                    this.$message("请选择需要删除商品");
+                    return;
+                }
+                var url = "/delItems";
+                var obj = {id:id};
+                this.axios.get(url,{params:obj}).then(res=>{
+                    if(res.data.code==-1){
+                        this.$message("删除失败");
+                    }else{
+                        this.$message("删除成功");
+                        this.loadMore();
+                    }
+                })
+            })
+        },
 
         //请求数据
         loadMore(){
@@ -171,9 +157,9 @@ export default {
         
         //合计
         getTotal(){
-			var prolist = this.list.filter(function (val) { return val.cb}),
-			totalPri = 0;
-			for (var i = 0; i < prolist.length; i++) {
+			var prolist = this.list.filter(function(val){ return val.cb}),
+			totalPri=0;
+			for(var i = 0; i < prolist.length; i++){
 				totalPri+=prolist[i].price*prolist[i].count;
 			}
 			return {totalNum:prolist.length,totalPrice:totalPri}

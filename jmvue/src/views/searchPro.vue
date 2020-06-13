@@ -29,17 +29,17 @@
 </template>
 <script>
 export default {
-    data(){
-        return{
-            pno:0, 
-            pcount:0, 
-            products:[] 
-        }
-    },
-    props:["kw"],
+  data(){
+    return{
+        pno:0, 
+        pcount:0, 
+        products:[] 
+    }
+  },
+  props:["kw"],
 
-    methods:{
-    //点击上一页或下一页按钮，获得-1或+1，和事件对象
+  methods:{
+    //点击上一页或下一页按钮，获得事件对象
     change(n,e){
       //如果当前按钮上没有class disabled
       if(e.target.className.indexOf("disabled")==-1){
@@ -52,19 +52,18 @@ export default {
       //console.log(i);
       this.load(i);//重新请求第i页的数据
     },
-    //重新用查询条件kw查询第i页的数据，如果没给页码，默认查询第0页
+
     load(pno=0){
       this.axios.get(
         "/searchPro",
         {
-          params:{//服务端接口需要两个参数
-            kw:this.kw, //查询关键词
-            pno//pno:pno //要查询第几页
+          params:{
+            kw:this.kw, 
+            pno
           }
         }
       ).then(result=>{
-        console.log(result.data);
-        //服务端返回页码，包含多个商品对象的数组和总页数，保存到data中用于绑定。
+        //console.log(result.data);
         this.pno=result.data.pno;
         this.products=result.data.data;
         this.pcount=result.data.pageCount;
@@ -75,7 +74,7 @@ export default {
     this.load()
   },
   watch:{
-    kw(){//监控地址栏变化，只要地址栏关键词发生变化，就自动重新查找。
+    kw(){
       this.load();
     }
   }

@@ -86,10 +86,6 @@
             <div class="row imgBo" style="background-color:rgb(240, 201, 172);">
                 <img class="imgDetails" :src="product.details">           
             </div>
-
-            <!--<div class="alsrtInfo" :style="{display: displayStsates}" >
-                <div class="profPrompt_test">{{aletMsg}}</div>
-            </div>-->
         </main>
         <myFooter></myFooter>
     </div>
